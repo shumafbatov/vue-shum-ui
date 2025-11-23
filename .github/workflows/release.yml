@@ -33,6 +33,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -102,4 +103,4 @@ jobs:
           git config --local user.name "GitHub Action"
           git add package.json package-lock.json
           git commit -m "chore: bump version to ${{ steps.bump.outputs.version }}" || exit 0
-          git push
+          git push || echo "Failed to push version changes (branch may be protected)"
