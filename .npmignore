@@ -1,0 +1,17 @@
+src/
+tests/
+docs/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+index.html
+vite.config.ts
+vitest.config.ts
+tsconfig.json
+tsconfig.node.json
+.eslintrc.cjs
+.prettierrc.json
+.gitignore
+README.md
+
