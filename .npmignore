@@ -1,11 +1,21 @@
+# Source files
 src/
 tests/
 docs/
-*.test.ts
-*.test.tsx
-*.spec.ts
-*.spec.tsx
-index.html
+
+# Development files
+.vscode/
+.idea/
+*.log
+*.local
+
+# Build files (except dist)
+node_modules/
+coverage/
+.vitest/
+dist-demo/
+
+# Config files
 vite.config.ts
 vitest.config.ts
 tsconfig.json
@@ -13,5 +23,16 @@ tsconfig.node.json
 .eslintrc.cjs
 .prettierrc.json
 .gitignore
-README.md
 
+# Demo files
+index.html
+src/demo/
+
+# CI/CD
+.github/
+
+# Other
+*.md
+!README.md
+.env
+.env.local

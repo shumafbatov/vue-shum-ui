@@ -2,6 +2,21 @@
   "name": "vue-shum-ui",
   "version": "1.0.0",
   "description": "Библиотека UI компонентов для Vue 3 + TypeScript",
+  "author": "shumaf",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shumafbatov/vue-ui-kit.git"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "typescript",
+    "ui",
+    "components",
+    "library",
+    "vue-components"
+  ],
   "type": "module",
   "main": "./dist/vue-shum-ui.umd.js",
   "module": "./dist/vue-shum-ui.es.js",
@@ -19,15 +34,23 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
-    "build:lib": "vite build --mode library",
+    "build": "npm run build:lib && npm run build:demo",
+    "build:lib": "vue-tsc --noEmit && vite build --mode library",
+    "build:demo": "vite build --mode demo",
     "preview": "vite preview",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:ui:alt": "cross-env VITEST_UI_PORT=51206 vitest --ui",
     "test:coverage": "vitest --coverage",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "prepublishOnly": "npm run build:lib",
+    "publish:patch": "npm run version:patch && npm publish --access public",
+    "publish:minor": "npm run version:minor && npm publish --access public",
+    "publish:major": "npm run version:major && npm publish --access public"
   },
   "dependencies": {
     "vue": "^3.4.0",

@@ -81,6 +81,9 @@ npm run dev
 # Сборка библиотеки
 npm run build:lib
 
+# Сборка демо приложения
+npm run build:demo
+
 # Тесты
 npm run test
 
@@ -97,6 +100,33 @@ npm run dev
 ```
 
 Демо приложение доступно по адресу `http://localhost:5173`
+
+Онлайн версия: [GitHub Pages](https://shumafbatov.github.io/vue-ui-kit/)
+
+## Публикация
+
+### Управление версиями
+
+Версии управляются автоматически через GitHub Actions:
+
+- **patch** - для исправлений багов (1.0.0 → 1.0.1)
+- **minor** - для новых функций (1.0.0 → 1.1.0)
+- **major** - для breaking changes (1.0.0 → 2.0.0)
+
+Версия обновляется автоматически при коммитах с префиксами:
+- `fix:` или `bugfix:` → patch
+- `feat:` или `feature:` → minor
+- `BREAKING:` → major
+
+Или вручную через GitHub Actions workflow_dispatch.
+
+### Публикация в npm
+
+После обновления версии пакет автоматически публикуется в npm.
+
+### Деплой демо
+
+Демо приложение автоматически деплоится на GitHub Pages при каждом push в main/master.
 
 ## Лицензия
 
