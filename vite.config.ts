@@ -52,7 +52,7 @@ export default defineConfig(({ mode }) => {
           '@': resolve(__dirname, 'src'),
         },
       },
-      base: '/vue-ui-kit/',
+      base: process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}/` : '/vue-shum-ui/',
       build: {
         outDir: 'dist-demo',
         emptyOutDir: true,
