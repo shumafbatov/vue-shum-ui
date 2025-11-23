@@ -52,7 +52,7 @@ export default defineConfig(({ mode }) => {
           '@': resolve(__dirname, 'src'),
         },
       },
-      base: '/vue-ui-kit/',
+      base: '/vue-shum-ui/',
       build: {
         outDir: 'dist-demo',
         emptyOutDir: true,
