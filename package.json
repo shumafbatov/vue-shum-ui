@@ -1,5 +1,5 @@
 {
-  "name": "vue-shum-ui",
+  "name": "@shumaf/vue-shum-ui",
   "version": "1.0.0",
   "description": "Библиотека UI компонентов для Vue 3 + TypeScript",
   "author": "shumaf",
