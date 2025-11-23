@@ -23,11 +23,12 @@ export default defineConfig(({ mode }) => {
           fileName: (format) => `vue-shum-ui.${format}.js`,
         },
         rollupOptions: {
-          external: ['vue'],
+          external: ['vue', 'ant-design-vue'],
           output: {
             exports: 'named',
             globals: {
               vue: 'Vue',
+              'ant-design-vue': 'AntDesignVue',
             },
             assetFileNames: (assetInfo) => {
               if (assetInfo.name === 'style.css') {

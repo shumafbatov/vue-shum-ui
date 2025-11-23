@@ -1,7 +1,7 @@
 {
   "name": "@shumaf/vue-shum-ui",
   "version": "1.0.3",
-  "description": "Библиотека UI компонентов для Vue 3 + TypeScript",
+  "description": "Библиотека UI компонентов для Vue 3 + TypeScript на основе Ant Design Vue. Предназначена для демонстрации компонентов и использования в других проектах.",
   "author": "shumaf",
   "license": "MIT",
   "repository": {
@@ -15,7 +15,10 @@
     "ui",
     "components",
     "library",
-    "vue-components"
+    "vue-components",
+    "ant-design-vue",
+    "design-system",
+    "ui-kit"
   ],
   "type": "module",
   "main": "./dist/vue-shum-ui.umd.js",
@@ -54,7 +57,8 @@
   },
   "dependencies": {
     "vue": "^3.4.0",
-    "vue-router": "^4.2.5"
+    "vue-router": "^4.2.5",
+    "ant-design-vue": "^4.2.1"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
@@ -77,6 +81,7 @@
     "vue-tsc": "^2.1.10"
   },
   "peerDependencies": {
-    "vue": "^3.4.0"
+    "vue": "^3.4.0",
+    "ant-design-vue": "^4.0.0"
   }
 }
