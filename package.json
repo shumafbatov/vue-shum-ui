@@ -1,12 +1,12 @@
 {
   "name": "@shumaf/vue-shum-ui",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Библиотека UI компонентов для Vue 3 + TypeScript",
   "author": "shumaf",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shumafbatov/vue-shum-ui"
+    "url": "git+https://github.com/shumafbatov/vue-shum-ui.git"
   },
   "keywords": [
     "vue",
